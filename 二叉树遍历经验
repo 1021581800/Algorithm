@@ -1,0 +1,23 @@
+先序，中序，后序遍历方式的区别在于把“执行操作”放在两个递归函数的位置！
+def dfs(root):
+    if not root:
+        return
+    执行操作:先序遍历
+    dfs(root.left)
+    dfs(root.right)
+    
+def dfs(root):
+    if not root:
+        return
+    
+    dfs(root.left)
+    执行操作:中序遍历
+    dfs(root.right)
+def dfs(root):
+    if not root:
+        return
+    
+    dfs(root.left)
+    
+    dfs(root.right)
+    执行操作:后序遍历
