@@ -1,0 +1,32 @@
+def three_quick_way(lists,low,high):
+    if high <= low:
+      return
+    #小于的
+    lt = low
+    #大于的
+    gt = high
+    #中间值
+    i = low + 1
+    #   对比值
+    v = lists[low]
+    while i <= gt:
+        if a[i] < v:
+            #左边比中值大，调换后   左边小   左边+1
+            a[i], a[lt] = a[lt], a[i]
+            lt += 1
+            i += 1
+          #右边比对比的值大    和最右边的交换，右边最大值-1
+        elif a[i] > v :
+            a[i],a[gt] = a[gt],a[i]
+            gt -= 1
+        #一样大的情况
+        else:
+            i+=1
+    #左边递归                      lt是中值！已确定的
+    three_quick_way(lists,low,lt-1)
+    #右边              lt=gt的情况了。中值已确定，  右边递归+1
+    three_quick_way(lists,gt+1,high)
+lists = [2,3,4,2,2,5,11,4]
+three_quick_way(lists, 0, len(lists)-1)
+print lst
+ 
