@@ -1,0 +1,2 @@
+递归中不重复遍历多次单元素！             for i in range(begin,end)
+                          每次搜索的起点设置为begin!!!  而不是1
