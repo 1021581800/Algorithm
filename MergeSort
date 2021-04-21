@@ -1,0 +1,29 @@
+
+
+def mergeSort(lists):
+  if len(lists)<=1:
+    return lists
+  middle = int(len(lists))/2
+  left = mergeSort(lists[:middle])
+  right = mergeSort(lists[middle:])
+  merge(left,right)
+  
+def merge(l,r):
+  t=[]
+  i,j = 0
+  while(i<len(l) and j<len(r)):
+      if l[i]< r[i]:
+          t.append(l[i])
+          i +=1 
+      else:
+          t.append(r[j])
+          j +=1
+  if i ==len(l):
+      while j<len(r):
+          t.append(r[j])
+          j +=1
+  else j == len(r):
+      while i<len(r):
+          t.append(l[j])
+          i +=1
+  return t
