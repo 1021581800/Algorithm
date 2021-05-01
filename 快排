@@ -1,0 +1,19 @@
+
+
+def quickSort(nums):
+    less= []
+    pivotList = []
+    more = []
+    if len(nums) <=1:
+        return nums
+    else:
+        pivot = nums[0]
+        for i in nums:
+            if i< pivot:
+                less.append(i)
+            elif i >pivot:
+                more.append(i)
+            else:pivotList.append(i)
+        less = quickSort2(less)
+        more = quickSort2(more)
+    return less + pivotList + more

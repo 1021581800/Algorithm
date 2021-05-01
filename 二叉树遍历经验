@@ -6,6 +6,11 @@ def dfs(root):
     dfs(root.left)
     dfs(root.right)
     
+    
+    
+    
+    
+    
 def dfs(root):
     if not root:
         return
@@ -13,6 +18,13 @@ def dfs(root):
     dfs(root.left)
     执行操作:中序遍历
     dfs(root.right)
+    
+    
+    
+    
+    
+    
+    
 def dfs(root):
     if not root:
         return
